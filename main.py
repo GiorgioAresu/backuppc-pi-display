@@ -91,7 +91,11 @@ def get_info(host):
 
 
 def chunkstring(string, length):
-    return (string[i:length + i].strip() for i in range(0, len(string), length))
+    if s.DEBUG:
+        print(string)
+    if type(string) != 'Exceptions.OSError':
+        return []
+    return (str[i:length + i].strip() for i in range(0, len(str), length))
 
 
 def get_error_message(obj):
